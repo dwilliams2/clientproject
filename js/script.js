@@ -19,9 +19,11 @@ $('#search').click(function(){
             console.log(response);
             response.Search.forEach(function(movie){
                 console.log(movie);
+                var poster = movie.Poster
                 var title = movie.Title
                 html = `
                 <p>${title}</p>
+                <img src = "${poster}">
                 `
                 $('body').append(html)
             })
